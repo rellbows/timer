@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>timer</title>
+	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+</head>
+<body>
+	<div>
+		<form>
+			<div>
+				<input type="text" name="timer-name" placeholder="Timer" />
+			</div>
+			<div id="timer-display">
+				<h1>00:00:00</h1>
+			</div>
+			<div class="timer-input">
+				Hrs <br />
+				<select name="hrs" id="hrs-dropdown">
+				</select>
+			</div>
+			<div class="timer-input">
+				Min <br />
+				<select name="min" id="min-dropdown">
+				</select>
+			</div>
+			<div class="timer-input">
+				Sec <br />
+				<select name="hrs" id="sec-dropdown">
+				</select>
+			</div>
+			<div class="buttons">
+				<button>Start</button>
+				<button>Pause</button>
+				<button>Reset</button>
+			</div>
+			<div class="buttons">
+				<!-- TODO: Implement Cancel button later...
+				<button>Cancel</button>
+				-->
+				Silent<input type="checkbox" name="silent-option" value="silent" /> 
+			</div>
+		</form>
+	</div>
+
+	<script src="./js/timer.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
