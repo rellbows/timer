@@ -7,6 +7,8 @@
 // and HH:MM:SS).
 // https://www.timer.net/
 
+/--TIMER LOGIC--/
+
 class Timer{
 	constructor(hrs, min, sec, silent) {
 		this.hrs = hrs;
@@ -90,5 +92,22 @@ function toHrsMinSec(milliseconds) {
 	return strDigit;
 }
 
-timer = new Timer(0, 1, 0, true);
-timer.start()
+/-TIMER INTERACTION-/
+
+var curTimer = document.getElementById('start-button');
+
+curTimer.addEventListener('click', function() {
+
+	//console.log("in listener...");
+	
+	// Getting time from dropdowns
+	var curHrs = document.getElementById('hrs-dropdown').selectedIndex;
+
+	var curMin = document.getElementById('min-dropdown').selectedIndex;
+
+	var curSec = document.getElementById('sec-dropdown').selectedIndex;
+
+	// TODO: have silent set to default to true for now, need to update once funct. implemented.
+	timer = new Timer(curHrs, curMin, curSec, true);
+	timer.start();
+}, false)

@@ -15,6 +15,9 @@ function autoFillDropdown(id, num) {
 		// Making option element...
 		var newOpt = document.createElement('option');
 
+		// Set the value for the option
+		newOpt.setAttribute("value", i);
+
 		// Appending the number for the option
 		var optNum = document.createTextNode(i);
 
