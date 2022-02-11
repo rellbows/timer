@@ -1,7 +1,49 @@
+/* Custom font 'Digital-7-monoitalic' used for timer display. Acceptable 
+to use for non-commercial purposes. Link below.
+https://www.1001fonts.com/digital-7-font.html#license */
+
+* {
+	font-family: sans-serif;
+}
+
+div#input-sect {
+	overflow: hidden;
+	margin:  auto;
+	width: 50%;
+}
+
 div.timer-input {
 	float: left;
+	text-align: center;
+	margin: auto;
+	width: 33%;
 }
 
 div.buttons {
 	clear:  left;
+	text-align: center;
+}
+
+div#timer-display {
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 5px;
+	background: black;
+	color: red;
+	font-size: 72px;
+	font-family: digital-7-monoitalic;
+}
+
+form {
+	border:  2px solid black;
+	border-radius:  5px;
+	padding: 10px;
+	width: 360px;
+	margin: auto;
+	background: #d3d3d3;
+}
+
+@font-face {
+	font-family: digital-7-monoitalic;
+	src: url('./digital-7.monoitalic.ttf');
 }

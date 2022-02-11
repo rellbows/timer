@@ -28,12 +28,14 @@ class Timer{
 		var timeInterval = setInterval(function() {
 			var elapsedTime = new Date() - startTime;
 			document.getElementById('timer-display').innerHTML = (toHrsMinSec(endTime - elapsedTime + 1000));
+			// There's a little slop between exactly when interval executes and the
+			// exact time. Can result in elapsed time being over just a bit,
+			// and displaying a negative time (-1 hr, 59 min, 60 sec). That's why
+			// the 1000 ms added above.
 			if(elapsedTime >= endTime) {
-				// There's a little slop between exactly when interval executes and the
-				// exact time. Can result in elapsed time being over just a bit,
-				// and displaying a negative time (-1 hr, 59 min, 60 sec).
 				document.getElementById('timer-display').innerHTML = '00:00:00';
-				console.log('timer done!!!');
+				document.getElementById('timer-display').innerHTML = 'COMPLETE';
+				document.getElementById('timer-display').style.fontWeight = 'bold';
 				clearInterval(timeInterval);
 			}
 		}, 0);
@@ -92,7 +94,7 @@ function toHrsMinSec(milliseconds) {
 	return strDigit;
 }
 
-/-TIMER INTERACTION-/
+/--TIMER INTERACTION--/
 
 var curTimer = document.getElementById('start-button');
 
