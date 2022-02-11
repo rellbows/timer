@@ -35,7 +35,6 @@ class Timer{
 			if(elapsedTime >= endTime) {
 				document.getElementById('timer-display').innerHTML = '00:00:00';
 				document.getElementById('timer-display').innerHTML = 'COMPLETE';
-				document.getElementById('timer-display').style.fontWeight = 'bold';
 				clearInterval(timeInterval);
 			}
 		}, 0);
